@@ -11,17 +11,17 @@
     <header>
         <nav class="header-nav">
             <ul class="navbar-left">
-                <li><a href="#"><picture><img src="image/burger.svg" alt=""></picture></a></li>
-                <li><a href="#"><picture><img src="image/home.svg" alt=""></picture></a></li>
-                <li> <input class="search-input" type="text" placeholder="Поиск" name="search">
-                    
+                <li class="nav-list"><a href="#"><picture><img src="image/burger.svg" alt=""></picture></a></li>
+                <li class="nav-list"><a href="#"><picture><img src="image/home.svg" alt=""></picture></a></li>
+                <li class="nav-list"><input class="search-input" type="text" placeholder="Поиск" name="search"></li>
             </ul>
-            <ul class="navbar-right">
-                <li><a href="#"><picture><img src="image/plus.svg" alt=""></picture></a></li>
-                <li><a href="#"><picture><img src="image/notifications.svg" alt=""></picture></a></li>
-                <li><a href="#"><picture><img src="image/Rectangle 7.svg" alt=""></picture></a></li>
+       
+            <ul class="user-bar">
+                <li class="user-list"><a href="#"><picture><img src="image/plus.svg" alt=""></picture></a></li>
+                <li class="user-list"><a href="#"><picture><img src="image/notifications.svg" alt=""></picture></a></li>
+                <li class="user-list"><a href="#"><picture><img src="image/Rectangle 7.svg" alt=""></picture></a></li>
             </ul> 
-        </nav>
+         </nav>
     </header>
     
 
@@ -30,12 +30,12 @@
             <h1 class="h1-login">Войти</h1>
             <a href="#" class="login-from-another">Войти через Google</a>
             <a href="#" class="login-from-another">Войти через VK</a>
-            <p>E-mail</p>
-            <input type="text"/>
-            <p>Пароль</p>
-            <input type="text"/>
+            <label>E-mail</label>
+            <input class="login-input" type="text" placeholder="Email-адрес"/>
+            <label>Пароль</label>
+            <input class="login-input" type="password" placeholder="пароль"/>
             <a href="#">Забыли пароль?</a>
-            <input type="submit" value="Войти"/>
+            <input class="login-button" type="submit" value="Войти"/>
             <p>Используя для входа Google, Apple или Email-адрес, вы соглашаетесь
                  с Условиями использования и Политикой конфиденциальности.</p>
  
