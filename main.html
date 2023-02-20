@@ -1,12 +1,316 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To do list</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normolize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="header">
+        <nav class="header-nav">
+            <ul class="navbar">
+                <li class="nav-list"><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 20C0.447716 20 0 19.5523 0 19C0 18.4477 0.447715 18 1 18H23C23.5523 18 24 18.4477 24 19C24 19.5523 23.5523 20 23 20H1ZM1 13C0.447716 13 0 12.5523 0 12C0 11.4477 0.447715 11 1 11H23C23.5523 11 24 11.4477 24 12C24 12.5523 23.5523 13 23 13H1ZM1 6C0.447716 6 0 5.55228 0 5C0 4.44772 0.447715 4 1 4H23C23.5523 4 24 4.44772 24 5C24 5.55228 23.5523 6 23 6H1Z" fill="#94A4B6"/></svg></a></li>
+                <li class="nav-list"><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.1999 21.0002H8.6999V13.5002H15.2999V21.0002H19.7999V9.3002L11.9999 3.4502L4.1999 9.3002V21.0002ZM2.3999 22.8002V8.4002L11.9999 1.2002L21.5999 8.4002V22.8002H13.4999V15.3002H10.4999V22.8002H2.3999Z" fill="#94A4B6"/></svg></a></li>
+                <li class="nav-list"><input class="search-input" type="text" placeholder="Поиск" name="search"></li>
+            </ul>
+       
+            <ul class="navbar">
+                <li class="nav-list"><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 22C11.4083 22 10.9286 21.5203 10.9286 20.9286V13.0714H3.07143C2.4797 13.0714 2 12.5917 2 12C2 11.4083 2.47969 10.9286 3.07143 10.9286H10.9286V3.07143C10.9286 2.4797 11.4083 2 12 2C12.5917 2 13.0714 2.47969 13.0714 3.07143V10.9286H20.9286C21.5203 10.9286 22 11.4083 22 12C22 12.5917 21.5203 13.0714 20.9286 13.0714H13.0714V20.9286C13.0714 21.5203 12.5917 22 12 22Z" fill="#94A4B6"/></svg></a></li>
+                <li class="nav-list"><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.3999 20.4V18.6H4.9199V9.42C4.9199 7.74 5.4149 6.245 6.4049 4.935C7.3949 3.625 8.6999 2.8 10.3199 2.46V1.59C10.3199 1.13 10.4849 0.75 10.8149 0.45C11.1449 0.15 11.5399 0 11.9999 0C12.4599 0 12.8549 0.15 13.1849 0.45C13.5149 0.75 13.6799 1.13 13.6799 1.59V2.46C15.2999 2.8 16.6099 3.625 17.6099 4.935C18.6099 6.245 19.1099 7.74 19.1099 9.42V18.6H21.5999V20.4H2.3999ZM11.9999 24C11.3599 24 10.7999 23.765 10.3199 23.295C9.8399 22.825 9.5999 22.26 9.5999 21.6H14.3999C14.3999 22.26 14.1649 22.825 13.6949 23.295C13.2249 23.765 12.6599 24 11.9999 24ZM6.7199 18.6H17.3099V9.42C17.3099 7.94 16.7999 6.68 15.7799 5.64C14.7599 4.6 13.5099 4.08 12.0299 4.08C10.5499 4.08 9.2949 4.6 8.2649 5.64C7.2349 6.68 6.7199 7.94 6.7199 9.42V18.6Z" fill="#94A4B6"/></svg></a></li>
+                
+            </ul> 
+         </nav>
+      </header> 
     
+    <main class="main-login">
+        <div class="container">
+            <div class="today-date">
+                <h1>Сегодня</h1>
+                <h2>Пн 30 янв</h2> 
+                <button class="new-task">+ Добавить задачу</button> 
+            </div>
+            <nav>
+                <ul class="priority-ul">
+                    <li class="priority-li"><a href="#" class="priority-a"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.588242 18V0H9.66765L10.1706 2.27647H16.4706V12.0706H9.69412L9.19118 9.82059H2.17648V18H0.588242ZM11.0441 10.4824H14.8824V3.86471H8.82059L8.31765 1.58824H2.17648V8.23235H10.5412L11.0441 10.4824Z" fill="#B73C58"/>                    </svg> Приоритет 1</a></li>
+                    <li class="priority-li"><a href="#" class="priority-a"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.588236 18V0H9.66765L10.1706 2.27647H16.4706V12.0706H9.69412L9.19118 9.82059H2.17647V18H0.588236ZM11.0441 10.4824H14.8824V3.86471H8.82059L8.31765 1.58824H2.17647V8.23235H10.5412L11.0441 10.4824Z" fill="#FFAB2C"/>
+                        </svg>
+                         Приоритет 2 </a> </li>
+                    <li class="priority-li"><a href="#" class="priority-a"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.588242 18V0H9.66765L10.1706 2.27647H16.4706V12.0706H9.69412L9.19118 9.82059H2.17648V18H0.588242ZM11.0441 10.4824H14.8824V3.86471H8.82059L8.31765 1.58824H2.17648V8.23235H10.5412L11.0441 10.4824Z" fill="#2A5480"/>
+                        </svg>
+                         Приоритет 3 </a> </li>
+                    <li class="priority-li"><a href="#" class="priority-a"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.588226 18V0H9.66764L10.1706 2.27647H16.4706V12.0706H9.69411L9.19117 9.82059H2.17646V18H0.588226ZM11.0441 10.4824H14.8823V3.86471H8.82058L8.31764 1.58824H2.17646V8.23235H10.5412L11.0441 10.4824Z" fill="#94A4B6"/>
+                        </svg>
+                         Обычные</a></li>
+                </ul>
+            </nav>
+            <h2>Просрочено</h2>
+            <button>перенести</button>
+            <ul class="overdue-list">
+                <li class="list-item"><button class="check-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_34_1997)">
+                    <rect width="24" height="24" rx="12" fill="#FCD3C5"/>
+                    <rect x="1" y="1" width="22" height="22" rx="7" stroke="#B32C00" stroke-width="2"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_34_1997">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    </button><p>List item</p><button class="edit-button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_34_2002)">
+                    <circle cx="16" cy="16" r="15.25" stroke="#7700B3" stroke-width="1.5"/>
+                    <path d="M23.6289 11.1651C23.1226 11.6714 22.3017 11.6714 21.7954 11.1651L20.8349 10.2046C20.3286 9.69832 20.3286 8.8774 20.8349 8.37108C21.0823 8.12369 21.3879 8 21.7517 8C22.1155 8 22.4211 8.12369 22.6685 8.37108L23.6289 9.33151C23.8763 9.5789 24 9.88449 24 10.2483C24 10.6121 23.8763 10.9177 23.6289 11.1651ZM20.3984 11.6016C21.1699 12.3732 21.1699 13.6241 20.3984 14.3956L10.794 24H8V21.206L17.6044 11.6016C18.3759 10.8301 19.6268 10.8301 20.3984 11.6016ZM19.4598 12.5402L18.9795 12.06L19.94 13.0205L19.4598 12.5402Z" fill="#7700B3"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_34_2002">
+                    <rect width="32" height="32" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    </button><button class="delete-button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_34_2003)">
+                        <path d="M11.5778 24C11.2074 24 10.8926 23.8704 10.6333 23.6111C10.3741 23.3519 10.2445 23.037 10.2445 22.6667V10H9.33334V8.66667H13.5111V8H19.3778V8.66667H23.5556V10H22.6445V22.6667C22.6445 23.0222 22.5111 23.3333 22.2445 23.6C21.9778 23.8667 21.6667 24 21.3111 24H11.5778ZM21.3111 10H11.5778V22.6667H21.3111V10ZM13.9333 20.7556H15.2667V11.8889H13.9333V20.7556ZM17.6222 20.7556H18.9556V11.8889H17.6222V20.7556Z" fill="#94A4B6"/>
+                        <circle cx="16" cy="16" r="15.25" stroke="#94A4B6" stroke-width="1.5"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_34_2003">
+                        <rect width="32" height="32" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        </button> 
+                </li>
+                        <li class="list-item"><button class="check-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_34_2449)">
+                            <rect width="24" height="24" rx="12" fill="#FCE6C5"/>
+                            <rect x="1" y="1" width="22" height="22" rx="7" stroke="#FFAB2C" stroke-width="2"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_34_2449">
+                            <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            </button><p>List item</p><button class="edit-button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_34_2002)">
+                            <circle cx="16" cy="16" r="15.25" stroke="#7700B3" stroke-width="1.5"/>
+                            <path d="M23.6289 11.1651C23.1226 11.6714 22.3017 11.6714 21.7954 11.1651L20.8349 10.2046C20.3286 9.69832 20.3286 8.8774 20.8349 8.37108C21.0823 8.12369 21.3879 8 21.7517 8C22.1155 8 22.4211 8.12369 22.6685 8.37108L23.6289 9.33151C23.8763 9.5789 24 9.88449 24 10.2483C24 10.6121 23.8763 10.9177 23.6289 11.1651ZM20.3984 11.6016C21.1699 12.3732 21.1699 13.6241 20.3984 14.3956L10.794 24H8V21.206L17.6044 11.6016C18.3759 10.8301 19.6268 10.8301 20.3984 11.6016ZM19.4598 12.5402L18.9795 12.06L19.94 13.0205L19.4598 12.5402Z" fill="#7700B3"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_34_2002">
+                            <rect width="32" height="32" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            </button><button class="delete-button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_34_2003)">
+                                <path d="M11.5778 24C11.2074 24 10.8926 23.8704 10.6333 23.6111C10.3741 23.3519 10.2445 23.037 10.2445 22.6667V10H9.33334V8.66667H13.5111V8H19.3778V8.66667H23.5556V10H22.6445V22.6667C22.6445 23.0222 22.5111 23.3333 22.2445 23.6C21.9778 23.8667 21.6667 24 21.3111 24H11.5778ZM21.3111 10H11.5778V22.6667H21.3111V10ZM13.9333 20.7556H15.2667V11.8889H13.9333V20.7556ZM17.6222 20.7556H18.9556V11.8889H17.6222V20.7556Z" fill="#94A4B6"/>
+                                <circle cx="16" cy="16" r="15.25" stroke="#94A4B6" stroke-width="1.5"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_34_2003">
+                                <rect width="32" height="32" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                </button>
+                         </li>
+                                <li class="list-item"><button class="check-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_34_2451)">
+                                    <rect width="24" height="24" rx="12" fill="#CAD8E1"/>
+                                    <rect x="1" y="1" width="22" height="22" rx="7" stroke="#006CB3" stroke-width="2"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_34_2451">
+                                    <rect width="24" height="24" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    </button><p>List item</p><button class="edit-button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_34_2002)">
+                                    <circle cx="16" cy="16" r="15.25" stroke="#7700B3" stroke-width="1.5"/>
+                                    <path d="M23.6289 11.1651C23.1226 11.6714 22.3017 11.6714 21.7954 11.1651L20.8349 10.2046C20.3286 9.69832 20.3286 8.8774 20.8349 8.37108C21.0823 8.12369 21.3879 8 21.7517 8C22.1155 8 22.4211 8.12369 22.6685 8.37108L23.6289 9.33151C23.8763 9.5789 24 9.88449 24 10.2483C24 10.6121 23.8763 10.9177 23.6289 11.1651ZM20.3984 11.6016C21.1699 12.3732 21.1699 13.6241 20.3984 14.3956L10.794 24H8V21.206L17.6044 11.6016C18.3759 10.8301 19.6268 10.8301 20.3984 11.6016ZM19.4598 12.5402L18.9795 12.06L19.94 13.0205L19.4598 12.5402Z" fill="#7700B3"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_34_2002">
+                                    <rect width="32" height="32" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    </button><button class="delete-button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_34_2003)">
+                                        <path d="M11.5778 24C11.2074 24 10.8926 23.8704 10.6333 23.6111C10.3741 23.3519 10.2445 23.037 10.2445 22.6667V10H9.33334V8.66667H13.5111V8H19.3778V8.66667H23.5556V10H22.6445V22.6667C22.6445 23.0222 22.5111 23.3333 22.2445 23.6C21.9778 23.8667 21.6667 24 21.3111 24H11.5778ZM21.3111 10H11.5778V22.6667H21.3111V10ZM13.9333 20.7556H15.2667V11.8889H13.9333V20.7556ZM17.6222 20.7556H18.9556V11.8889H17.6222V20.7556Z" fill="#94A4B6"/>
+                                        <circle cx="16" cy="16" r="15.25" stroke="#94A4B6" stroke-width="1.5"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_34_2003">
+                                        <rect width="32" height="32" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                        </button>
+                                 </li>
+                                        <li class="list-item"><button class="check-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="1" width="22" height="22" rx="7" stroke="#94A4B6" stroke-width="2"/>
+                                            </svg>
+                                            </button><p>List item</p><button class="edit-button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_34_2002)">
+                                            <circle cx="16" cy="16" r="15.25" stroke="#7700B3" stroke-width="1.5"/>
+                                            <path d="M23.6289 11.1651C23.1226 11.6714 22.3017 11.6714 21.7954 11.1651L20.8349 10.2046C20.3286 9.69832 20.3286 8.8774 20.8349 8.37108C21.0823 8.12369 21.3879 8 21.7517 8C22.1155 8 22.4211 8.12369 22.6685 8.37108L23.6289 9.33151C23.8763 9.5789 24 9.88449 24 10.2483C24 10.6121 23.8763 10.9177 23.6289 11.1651ZM20.3984 11.6016C21.1699 12.3732 21.1699 13.6241 20.3984 14.3956L10.794 24H8V21.206L17.6044 11.6016C18.3759 10.8301 19.6268 10.8301 20.3984 11.6016ZM19.4598 12.5402L18.9795 12.06L19.94 13.0205L19.4598 12.5402Z" fill="#7700B3"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_34_2002">
+                                            <rect width="32" height="32" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                            </svg>
+                                            </button><button class="delete-button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_34_2003)">
+                                                <path d="M11.5778 24C11.2074 24 10.8926 23.8704 10.6333 23.6111C10.3741 23.3519 10.2445 23.037 10.2445 22.6667V10H9.33334V8.66667H13.5111V8H19.3778V8.66667H23.5556V10H22.6445V22.6667C22.6445 23.0222 22.5111 23.3333 22.2445 23.6C21.9778 23.8667 21.6667 24 21.3111 24H11.5778ZM21.3111 10H11.5778V22.6667H21.3111V10ZM13.9333 20.7556H15.2667V11.8889H13.9333V20.7556ZM17.6222 20.7556H18.9556V11.8889H17.6222V20.7556Z" fill="#94A4B6"/>
+                                                <circle cx="16" cy="16" r="15.25" stroke="#94A4B6" stroke-width="1.5"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_34_2003">
+                                                <rect width="32" height="32" fill="white"/>
+                                                </clipPath>
+                                                </defs>
+                                                </svg>
+                                                </button> 
+                                        </li>
+            </ul>
+            <h2>30 Янв, Сегодня, Вт</h2>
+            <ul class="today-list">
+                <li class="list-item"><button class="check-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="22" height="22" rx="7" stroke="#94A4B6" stroke-width="2"/>
+                    </svg>
+                    </button><p>List item</p><button class="edit-button"> <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_34_2002)">
+                    <circle cx="16" cy="16" r="15.25" stroke="#7700B3" stroke-width="1.5"/>
+                    <path d="M23.6289 11.1651C23.1226 11.6714 22.3017 11.6714 21.7954 11.1651L20.8349 10.2046C20.3286 9.69832 20.3286 8.8774 20.8349 8.37108C21.0823 8.12369 21.3879 8 21.7517 8C22.1155 8 22.4211 8.12369 22.6685 8.37108L23.6289 9.33151C23.8763 9.5789 24 9.88449 24 10.2483C24 10.6121 23.8763 10.9177 23.6289 11.1651ZM20.3984 11.6016C21.1699 12.3732 21.1699 13.6241 20.3984 14.3956L10.794 24H8V21.206L17.6044 11.6016C18.3759 10.8301 19.6268 10.8301 20.3984 11.6016ZM19.4598 12.5402L18.9795 12.06L19.94 13.0205L19.4598 12.5402Z" fill="#7700B3"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_34_2002">
+                    <rect width="32" height="32" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    </button><button class="delete-button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_34_2003)">
+                        <path d="M11.5778 24C11.2074 24 10.8926 23.8704 10.6333 23.6111C10.3741 23.3519 10.2445 23.037 10.2445 22.6667V10H9.33334V8.66667H13.5111V8H19.3778V8.66667H23.5556V10H22.6445V22.6667C22.6445 23.0222 22.5111 23.3333 22.2445 23.6C21.9778 23.8667 21.6667 24 21.3111 24H11.5778ZM21.3111 10H11.5778V22.6667H21.3111V10ZM13.9333 20.7556H15.2667V11.8889H13.9333V20.7556ZM17.6222 20.7556H18.9556V11.8889H17.6222V20.7556Z" fill="#94A4B6"/>
+                        <circle cx="16" cy="16" r="15.25" stroke="#94A4B6" stroke-width="1.5"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_34_2003">
+                        <rect width="32" height="32" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        </button> 
+                    
+                </li>
+                        <li class="list-item"><button class="check-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="22" height="22" rx="7" stroke="#94A4B6" stroke-width="2"/>
+                            </svg>
+                            </button><p>List item</p><button class="edit-button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_34_2002)">
+                            <circle cx="16" cy="16" r="15.25" stroke="#7700B3" stroke-width="1.5"/>
+                            <path d="M23.6289 11.1651C23.1226 11.6714 22.3017 11.6714 21.7954 11.1651L20.8349 10.2046C20.3286 9.69832 20.3286 8.8774 20.8349 8.37108C21.0823 8.12369 21.3879 8 21.7517 8C22.1155 8 22.4211 8.12369 22.6685 8.37108L23.6289 9.33151C23.8763 9.5789 24 9.88449 24 10.2483C24 10.6121 23.8763 10.9177 23.6289 11.1651ZM20.3984 11.6016C21.1699 12.3732 21.1699 13.6241 20.3984 14.3956L10.794 24H8V21.206L17.6044 11.6016C18.3759 10.8301 19.6268 10.8301 20.3984 11.6016ZM19.4598 12.5402L18.9795 12.06L19.94 13.0205L19.4598 12.5402Z" fill="#7700B3"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_34_2002">
+                            <rect width="32" height="32" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            </button><button class="delete-button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_34_2003)">
+                                <path d="M11.5778 24C11.2074 24 10.8926 23.8704 10.6333 23.6111C10.3741 23.3519 10.2445 23.037 10.2445 22.6667V10H9.33334V8.66667H13.5111V8H19.3778V8.66667H23.5556V10H22.6445V22.6667C22.6445 23.0222 22.5111 23.3333 22.2445 23.6C21.9778 23.8667 21.6667 24 21.3111 24H11.5778ZM21.3111 10H11.5778V22.6667H21.3111V10ZM13.9333 20.7556H15.2667V11.8889H13.9333V20.7556ZM17.6222 20.7556H18.9556V11.8889H17.6222V20.7556Z" fill="#94A4B6"/>
+                                <circle cx="16" cy="16" r="15.25" stroke="#94A4B6" stroke-width="1.5"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_34_2003">
+                                <rect width="32" height="32" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                </button> 
+                        </li>
+                                <li class="list-item"><button class="check-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="1" y="1" width="22" height="22" rx="7" stroke="#94A4B6" stroke-width="2"/>
+                                    </svg>
+                                    </button><p>List item</p> <button class="edit-button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_34_2002)">
+                                    <circle cx="16" cy="16" r="15.25" stroke="#7700B3" stroke-width="1.5"/>
+                                    <path d="M23.6289 11.1651C23.1226 11.6714 22.3017 11.6714 21.7954 11.1651L20.8349 10.2046C20.3286 9.69832 20.3286 8.8774 20.8349 8.37108C21.0823 8.12369 21.3879 8 21.7517 8C22.1155 8 22.4211 8.12369 22.6685 8.37108L23.6289 9.33151C23.8763 9.5789 24 9.88449 24 10.2483C24 10.6121 23.8763 10.9177 23.6289 11.1651ZM20.3984 11.6016C21.1699 12.3732 21.1699 13.6241 20.3984 14.3956L10.794 24H8V21.206L17.6044 11.6016C18.3759 10.8301 19.6268 10.8301 20.3984 11.6016ZM19.4598 12.5402L18.9795 12.06L19.94 13.0205L19.4598 12.5402Z" fill="#7700B3"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_34_2002">
+                                    <rect width="32" height="32" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    </button><button class="delete-button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_34_2003)">
+                                        <path d="M11.5778 24C11.2074 24 10.8926 23.8704 10.6333 23.6111C10.3741 23.3519 10.2445 23.037 10.2445 22.6667V10H9.33334V8.66667H13.5111V8H19.3778V8.66667H23.5556V10H22.6445V22.6667C22.6445 23.0222 22.5111 23.3333 22.2445 23.6C21.9778 23.8667 21.6667 24 21.3111 24H11.5778ZM21.3111 10H11.5778V22.6667H21.3111V10ZM13.9333 20.7556H15.2667V11.8889H13.9333V20.7556ZM17.6222 20.7556H18.9556V11.8889H17.6222V20.7556Z" fill="#94A4B6"/>
+                                        <circle cx="16" cy="16" r="15.25" stroke="#94A4B6" stroke-width="1.5"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_34_2003">
+                                        <rect width="32" height="32" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                        </button> 
+                                </li>
+                                        <li class="list-item"><button class="check-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="1" width="22" height="22" rx="7" stroke="#94A4B6" stroke-width="2"/>
+                                            </svg>
+                                            </button><p>List item</p><button class="edit-button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_34_2002)">
+                                            <circle cx="16" cy="16" r="15.25" stroke="#7700B3" stroke-width="1.5"/>
+                                            <path d="M23.6289 11.1651C23.1226 11.6714 22.3017 11.6714 21.7954 11.1651L20.8349 10.2046C20.3286 9.69832 20.3286 8.8774 20.8349 8.37108C21.0823 8.12369 21.3879 8 21.7517 8C22.1155 8 22.4211 8.12369 22.6685 8.37108L23.6289 9.33151C23.8763 9.5789 24 9.88449 24 10.2483C24 10.6121 23.8763 10.9177 23.6289 11.1651ZM20.3984 11.6016C21.1699 12.3732 21.1699 13.6241 20.3984 14.3956L10.794 24H8V21.206L17.6044 11.6016C18.3759 10.8301 19.6268 10.8301 20.3984 11.6016ZM19.4598 12.5402L18.9795 12.06L19.94 13.0205L19.4598 12.5402Z" fill="#7700B3"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_34_2002">
+                                            <rect width="32" height="32" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                            </svg>
+                                            </button><button class="delete-button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_34_2003)">
+                                                <path d="M11.5778 24C11.2074 24 10.8926 23.8704 10.6333 23.6111C10.3741 23.3519 10.2445 23.037 10.2445 22.6667V10H9.33334V8.66667H13.5111V8H19.3778V8.66667H23.5556V10H22.6445V22.6667C22.6445 23.0222 22.5111 23.3333 22.2445 23.6C21.9778 23.8667 21.6667 24 21.3111 24H11.5778ZM21.3111 10H11.5778V22.6667H21.3111V10ZM13.9333 20.7556H15.2667V11.8889H13.9333V20.7556ZM17.6222 20.7556H18.9556V11.8889H17.6222V20.7556Z" fill="#94A4B6"/>
+                                                <circle cx="16" cy="16" r="15.25" stroke="#94A4B6" stroke-width="1.5"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_34_2003">
+                                                <rect width="32" height="32" fill="white"/>
+                                                </clipPath>
+                                                </defs>
+                                                </svg>
+                                                </button>
+                                             </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
 </body>
+<script src="/scripts/script.js"></script>
 </html>
